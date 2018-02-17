@@ -1,0 +1,58 @@
+.Header {
+    width: 100%;
+    &__partOne {
+        min-height: 20px;
+        background-color: black;
+        display: flex;
+        padding: 8px;
+        &__mobileBurger {
+            margin-right: 25px;
+            margin-left: 5px;
+        }
+    }
+}
+.Header__partOne__mobileBurger--disabled,
+.Header__partTwo--disabled {
+    display: none;
+}
+@media screen and (min-width: 1023px){
+    .Header{
+        display: flex;
+        background: url('./../../resources/LayoutGraphic/header.jpg');
+        min-height: 100px;
+        box-sizing: border-box;
+        width: 75%;
+        &__partOne{
+            display: block;
+            background: none;
+            width: 50%;
+            align-self: center;
+        }
+        &__partTwo{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 50%;
+            padding-right: 10px;
+            &__buttons{
+                display: flex;
+                flex-direction: row;
+                padding-top: 16px;
+                align-items: center;
+                &__userButtons{
+                    padding-right: 20px;
+                }
+            }
+            &__search{
+                display: flex;
+                align-items: center;
+                flex-direction: row-reverse;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                &__searchElements{
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+}
