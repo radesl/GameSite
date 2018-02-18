@@ -8,7 +8,6 @@ import Search from './../Search'
 
 const Header = props => {
     const { isMobile } = props
-    console.log(isMobile)
     return (
         <div className='Header' >
             <div className='Header__partOne'>

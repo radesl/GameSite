@@ -8,7 +8,7 @@ class MobileMenuDropdownContainer extends React.Component {
     }
     createDropdownList() {
         const { dropdown } = this.props
-        return dropdown.map((option, id) => {
+        return dropdown && dropdown.map((option, id) => {
             return <option key={id}>{option}</option>
         })
 
