@@ -1,12 +1,17 @@
-*{
+* {
     margin: 0;
     padding: 0;
     background: none;
     border: none;
 }
-.App{
-    display: flex;
-    justify-content: center;
-    background-color: rgba(171, 165, 165, 0.45);
-
+.App {
+    &__Header {
+        display: flex;
+        justify-content: center;
+        background-color: rgba(171, 165, 165, 0.45);
+    }
+    &__NavBar {
+        display: flex;
+        justify-content: center;
+    }
 }
