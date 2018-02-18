@@ -2,6 +2,7 @@ import React from 'react'
 import MobileMenuTitle from './../MobileMenuTitle'
 import MobileMenuSection from './../MobileMenuSection'
 import MobileMenuDropdownSection from './../MobileMenuDropdownSection'
+import PremiumInformation from './../PremiumInformation'
 
 class MobileMenuBarContainer extends React.Component {
     render() {
@@ -73,6 +74,9 @@ class MobileMenuBarContainer extends React.Component {
                             <MobileMenuSection topics={['what gives you premium']} />
                         </div>
                     </div>
+                </div>
+                <div className='MobileMenuBarContainer__partFive'>
+                    <PremiumInformation />
                 </div>
             </div>
         )
