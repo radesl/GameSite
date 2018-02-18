@@ -1,0 +1,11 @@
+.RegisterContainer{
+    &__link{
+        color: #c1a5a5;
+        padding-bottom: 3px;
+    }
+    &__link:hover{
+        color: #ce5c15;
+        border-bottom: 1px dotted #ce5c15;
+        cursor: pointer;
+    }
+}

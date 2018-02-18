@@ -1,0 +1,16 @@
+.SocialMediaButtonsContainer{
+    display: flex;
+    align-items: center;
+    &__button{
+        padding-left: 6px;
+        &__facebook{
+            width: 25px;
+        }
+        &__youtube{
+            width: 28px;
+        }
+        &__twitter{
+            width: 28px;
+        }
+    }
+}
