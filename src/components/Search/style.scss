@@ -1,14 +1,12 @@
-.SearchContainer{
+.SearchContainer {
     display: flex;
     border: 1px solid gray;
-    &__input{
+    &__input {
         min-height: 30px;
-        border: none;
         width: 200px;
-    }
-    &__button{
-        background: none;
         background-color: white;
-        border: none;
+    }
+    &__button {
+        background-color: white;
     }
 }
