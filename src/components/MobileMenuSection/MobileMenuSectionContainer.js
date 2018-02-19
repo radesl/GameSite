@@ -15,7 +15,7 @@ class MobileMenuSectionContainer extends React.Component {
     render() {
         const showTopics = this.showTopics()
         return (
-            <div>
+            <div className='MobileMenuSectionContainer'>
                 {showTopics}
             </div>
         )

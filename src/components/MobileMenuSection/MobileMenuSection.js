@@ -1,9 +1,10 @@
 import React from 'react'
+import './style.scss'
 
 const MobileMenuSection = props => {
     const { topic } = props
     return (
-        <div>
+        <div className='MobileMenuSection'>
             <a>{topic}</a>
         </div>
     )
