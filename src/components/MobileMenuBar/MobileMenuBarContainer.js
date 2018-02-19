@@ -26,12 +26,16 @@ class MobileMenuBarContainer extends React.Component {
                     <div className='MobileMenuBarContainer__navPart__column'>
                         <div className='MobileMenuBarContainer__navPart__column__section'>
                             <MobileMenuTitle title={'game encyclopedia'} />
-                            <MobileMenuDropdownSection dropdownTitle={'platform'}
-                                dropdown={['PC', 'PS4', 'PS3', 'XONE', 'X360', 'Switch', 'AND', 'IOS']} />
-                            <MobileMenuDropdownSection dropdownTitle={'species'}
-                                dropdown={['Action games', 'RPG', 'MMO games', 'Strategic games', 'Adventure',
-                                    'Sports', 'arcade', 'Fighting games', 'Racing games', 'simulations',
-                                    'Logic games']} />
+                            <div className='MobileMenuBarContainer__navPart__column__section--extraMargin'>
+                                <MobileMenuDropdownSection dropdownTitle={'platform'}
+                                    dropdown={['PC', 'PS4', 'PS3', 'XONE', 'X360', 'Switch', 'AND', 'IOS']} />
+                            </div>
+                            <div className='MobileMenuBarContainer__navPart__column__section--extraMargin'>
+                                <MobileMenuDropdownSection dropdownTitle={'species'}
+                                    dropdown={['Action games', 'RPG', 'MMO games', 'Strategic games', 'Adventure',
+                                        'Sports', 'arcade', 'Fighting games', 'Racing games', 'simulations',
+                                        'Logic games']} />
+                            </div>
                             <MobileMenuSection
                                 topics={['Top Games', 'dates of the premier', 'Beta Tests', 'ranking of games',
                                     'recommended', 'company catalogue']} />
@@ -51,9 +55,11 @@ class MobileMenuBarContainer extends React.Component {
                         </div>
                         <div className='MobileMenuBarContainer__navPart__column__section'>
                             <MobileMenuTitle title={'Downloads'} />
-                            <MobileMenuDropdownSection dropdownTitle={'downloads'}
-                                dropdown={['games and demos', 'Mods and Expansions', 'updates', 'programs',
-                                    'wallpaper']} />
+                            <div className='MobileMenuBarContainer__navPart__column__section--extraMargin'>
+                                <MobileMenuDropdownSection dropdownTitle={'downloads'}
+                                    dropdown={['games and demos', 'Mods', 'updates', 'programs',
+                                        'wallpaper']} />
+                            </div>
                         </div>
                     </div>
                     <div className='MobileMenuBarContainer__navPart__column'>

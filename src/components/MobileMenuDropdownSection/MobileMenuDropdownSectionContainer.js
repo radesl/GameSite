@@ -1,4 +1,6 @@
 import React from 'react'
+import MobileMenuDropdown from './MobileMenuDropdown'
+import './style.scss'
 
 class MobileMenuDropdownContainer extends React.Component {
     constructor() {
@@ -9,7 +11,7 @@ class MobileMenuDropdownContainer extends React.Component {
     createDropdownList() {
         const { dropdown } = this.props
         return dropdown && dropdown.map((option, id) => {
-            return <option key={id}>{option}</option>
+            return <MobileMenuDropdown option={option} key={id} />
         })
 
     }
@@ -25,7 +27,7 @@ class MobileMenuDropdownContainer extends React.Component {
     render() {
         const showDropdown = this.showDropdown()
         return (
-            <div>
+            <div className='MobileMenuDropdownContainer'>
                 {showDropdown}
             </div>
         )
