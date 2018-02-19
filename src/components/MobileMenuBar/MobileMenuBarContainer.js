@@ -100,6 +100,10 @@ class MobileMenuBarContainer extends React.Component {
                 <div className='MobileMenuBarContainer__socialPart'>
                     <MobileMenuSocialIcons title={'Facebook'}
                         links={['GameSite', 'News', 'tvgame.pl']} />
+                        <MobileMenuSocialIcons title={'Youtube'}
+                        links={['tvgame.pl', 'tvgame.pl plus']} />
+                        <MobileMenuSocialIcons title={'Twitter'}
+                        links={['GameSite']} />
                 </div>
             </div>
         )

@@ -1,5 +1,6 @@
 import React from 'react'
 import MobileMenuSocialIcons from './MobileMenuSocialIcons'
+import './style.scss'
 
 class MobileMenuSocialIconsContainer extends React.Component {
     constructor() {
@@ -16,9 +17,9 @@ class MobileMenuSocialIconsContainer extends React.Component {
         const showSocialPlatforms = this.showSocialPlatforms()
         const { title } = this.props
         return (
-            <div>
-                <div>{title}</div>
-                <div>
+            <div className='MobileMenuSocialIconsContainer'>
+                <div className={`MobileMenuSocialIconsContainer--${title}`}>{title}:</div>
+                <div className='MobileMenuSocialIconsContainer__platformLinks'>
                     {showSocialPlatforms}
                 </div>
             </div>

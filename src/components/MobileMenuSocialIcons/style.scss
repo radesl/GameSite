@@ -1,0 +1,10 @@
+.MobileMenuSocialIconsContainer {
+    display: flex;
+    &__platformLinks {
+        display: flex;
+        padding-left: 1px;
+    }
+}
+.MobileMenuSocialIcons {
+    padding-left: 5px;
+}
