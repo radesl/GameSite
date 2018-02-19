@@ -1,13 +1,10 @@
 import React from 'react'
 
-const PremiumInformation = () => {
+const PremiumInformation = props => {
+    const { option } = props
     return (
-        <ul>
-            <li>Your Profile</li>
-            <li>Collection of Games</li>
-            <li>Settings</li>
-            <li>Colors</li>
-        </ul>
-    )
+        <li className='PremiumInformation'>
+            <a>{option}</a>
+        </li>)
 }
 export default PremiumInformation

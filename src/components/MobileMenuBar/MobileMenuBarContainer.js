@@ -3,6 +3,7 @@ import MobileMenuTitle from './../MobileMenuTitle'
 import MobileMenuSection from './../MobileMenuSection'
 import MobileMenuDropdownSection from './../MobileMenuDropdownSection'
 import PremiumInformation from './../PremiumInformation'
+import MobileMenuSocialIcons from './../MobileMenuSocialIcons'
 import './style.scss'
 
 class MobileMenuBarContainer extends React.Component {
@@ -91,9 +92,14 @@ class MobileMenuBarContainer extends React.Component {
                     </div>
                     <div className='MobileMenuBarContainer__navPart__column'>
                         <div className='MobileMenuBarContainer__navPart__column__section'>
-                            <PremiumInformation />
+                            <PremiumInformation options={['Your Profile', 'Collection of Games',
+                                'Settings', 'Colors']} />
                         </div>
                     </div>
+                </div>
+                <div className='MobileMenuBarContainer__socialPart'>
+                    <MobileMenuSocialIcons title={'Facebook'}
+                        links={['GameSite', 'News', 'tvgame.pl']} />
                 </div>
             </div>
         )
