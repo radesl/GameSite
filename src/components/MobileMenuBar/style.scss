@@ -16,6 +16,16 @@
             &__section {
                 margin-bottom: 10px;
                 padding-bottom: 5px;
+                &__mobileButton {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    border-bottom: 1px dotted gray;
+                }
+                &--visibility {
+                    display: none;
+                }
             }
             &__section--underline {
                 border-bottom: 1px dotted gray;
