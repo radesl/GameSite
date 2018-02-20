@@ -1,7 +1,7 @@
 import React from 'react'
-import facebookImage from './../../resources/socialIcons/facebook.png'
-import youtubeImage from './../../resources/socialIcons/youtube.png'
-import twitterImage from './../../resources/socialIcons/twitter.png'
+import facebookImage from './../../resources/socialIcons/Facebook.png'
+import youtubeImage from './../../resources/socialIcons/Youtube.png'
+import twitterImage from './../../resources/socialIcons/Twitter.png'
 import './style.scss'
 
 

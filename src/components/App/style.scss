@@ -15,8 +15,15 @@
         display: flex;
         justify-content: center;
     }
-    &__MobileMenuBar{
+    &__MobileMenuBar {
         display: flex;
         justify-content: center;
+    }
+}
+@media screen and (max-width: 1023px) {
+    .App {
+        &__MobileMenuBar {
+            justify-content: flex-start;
+        }
     }
 }

@@ -33,5 +33,30 @@
         display: flex;
         justify-content: space-around;
         border-top: 1px dotted gray;
+        width: 96%;
+        margin-left: 2%;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .MobileMenuBarContainer {
+        display: flex;
+        &__navPart {
+            flex-direction: column;
+            width: 50%;
+            &__column {
+                width: 100%;
+                padding-top: 0;
+                &__section--underline {
+                    border: none;
+                }
+            }
+        }
+        &__socialPart {
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 50%;
+        }
     }
 }

@@ -3,3 +3,12 @@
     color: #a50101;
     font-weight: 600;
 }
+@media screen and (max-width: 1023px) {
+    .MobileMenuTitle {
+        color: black;
+        padding: 7px;
+    }
+    .MobileMenuTitle--underline {
+        border-bottom: 1px dotted gray;
+    }
+}
