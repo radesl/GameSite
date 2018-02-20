@@ -223,7 +223,9 @@ class MobileMenuBarContainer extends React.Component {
                         </div>
                     </div>
                     <div className='MobileMenuBarContainer__navPart__column'>
-                        <div className='MobileMenuBarContainer__navPart__column__section'>
+                        <div className={isMobile
+                            ? 'MobileMenuBarContainer__navPart__column__section--visibility'
+                            : 'MobileMenuBarContainer__navPart__column__section'}>
                             <PremiumInformation options={['Your Profile', 'Collection of Games',
                                 'Settings', 'Colors']} />
                         </div>
