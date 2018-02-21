@@ -4,10 +4,21 @@
     border: 1px solid gray;
     &__input {
         min-height: 30px;
-        width: 200px;
+        width: 80%;
         background-color: white;
     }
     &__button {
         background-color: white;
+        width: 20%;
+    }
+}
+@media screen and (max-width: 1023px){
+    .SearchContainer {
+        &__input {
+            width: 90%;
+        }
+        &__button {
+            width: 10%;
+        }
     }
 }
