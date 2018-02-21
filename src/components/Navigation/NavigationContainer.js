@@ -7,7 +7,7 @@ class NavigationContainer extends React.PureComponent {
     }
     render() {
         return (
-            <Navigation handleClick={this.toogleMobileMenu} displayMenu={displayMenu} />
+            <Navigation />
         )
     }
 }
