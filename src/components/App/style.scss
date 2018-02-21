@@ -5,25 +5,3 @@
     border: none;
     list-style-type: none;
 }
-.App {
-    &__Header {
-        display: flex;
-        justify-content: center;
-        background-color: rgba(171, 165, 165, 0.45);
-    }
-    &__NavBar {
-        display: flex;
-        justify-content: center;
-    }
-    &__MobileMenuBar {
-        display: flex;
-        justify-content: center;
-    }
-}
-@media screen and (max-width: 1023px) {
-    .App {
-        &__MobileMenuBar {
-            justify-content: flex-start;
-        }
-    }
-}

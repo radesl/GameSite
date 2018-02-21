@@ -52,7 +52,7 @@ class MobileMenuBarContainer extends React.PureComponent {
         const { menuSections } = this.state
         const sectionKeys = Object.keys(menuSections)
         const section = sectionKeys.filter(section => {
-            return section === sectionState
+            return section == sectionState
         })
         this.setState({
             section: !section

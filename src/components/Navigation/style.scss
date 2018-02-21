@@ -1,0 +1,25 @@
+.Navigation {
+    &__Header {
+        display: flex;
+        justify-content: center;
+        background-color: rgba(171, 165, 165, 0.45);
+    }
+    &__NavBar {
+        display: flex;
+        justify-content: center;
+        background-color: rgba(171, 165, 165, 0.45);
+    }
+    &__MobileMenuBar {
+        display: flex;
+        justify-content: center;
+        padding-top: 1px;
+        background-color: rgba(171, 165, 165, 0.45);
+    }
+}
+@media screen and (max-width: 1023px) {
+    .Navigation {
+        &__MobileMenuBar {
+            justify-content: flex-start;
+        }
+    }
+}
