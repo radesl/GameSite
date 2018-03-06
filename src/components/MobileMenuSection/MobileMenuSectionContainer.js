@@ -1,23 +1,47 @@
 import React from 'react'
 import MobileMenuSection from './MobileMenuSection'
+import MobileMenuList from './../MobileMenuList'
+import MobileMenuDropdownSection from './../MobileMenuDropdownSection'
 
-class MobileMenuSectionContainer extends React.Component {
+class MobileMenuSectionContainer extends React.PureComponent {
     constructor() {
         super()
-        this.showTopics = this.showTopics.bind(this)
+        this.state = {
+            isOpen: false
+        }
+        this.toogleSection = this.toogleSection.bind(this)
+        this.showTopicsList = this.showTopicsList.bind(this)
+        this.showDropdownList = this.showDropdownList.bind(this)
     }
-    showTopics() {
+    toogleSection() {
+        const { isOpen } = this.state
+        this.setState({
+            isOpen: !isOpen
+        })
+    }
+    showTopicsList() {
         const { topics } = this.props
-        return topics && topics.map((topic, id) => {
-            return <MobileMenuSection topic={topic} key={id} />
+        return topics && <MobileMenuList topics={topics} />
+    }
+    showDropdownList() {
+        const { dropdown } = this.props
+        return dropdown && dropdown.map((list, index) => {
+            return <MobileMenuDropdownSection dropdown={list} key={index} />
         })
     }
     render() {
-        const showTopics = this.showTopics()
+        const { isOpen } = this.state
+        const { title, topics } = this.props
+        const showTopicsList = this.showTopicsList()
+        const showDropdownList = this.showDropdownList()
+        console.log(isOpen, title)
         return (
-            <div className='MobileMenuSectionContainer'>
-                {showTopics}
-            </div>
+            <MobileMenuSection
+                toogleSection={this.toogleSection}
+                isOpen={isOpen}
+                title={title}
+                showTopicsList={showTopicsList}
+                showDropdownList={showDropdownList} />
         )
     }
 }

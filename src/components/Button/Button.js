@@ -1,7 +1,10 @@
 import React from 'react'
+import './style.scss'
 
 const Button = props => {
-    const { title, handle, sectionState } = props
-    return <button onClick={handle(sectionState)}>{title}</button>
+    const { title, handle } = props
+    return <button
+        className='MobileMenuButton'
+        onClick={handle}>{title}</button>
 }
 export default Button

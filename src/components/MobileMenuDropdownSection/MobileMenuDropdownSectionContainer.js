@@ -5,7 +5,6 @@ import './style.scss'
 class MobileMenuDropdownContainer extends React.Component {
     constructor() {
         super()
-        this.showDropdown = this.showDropdown.bind(this)
         this.createDropdownList = this.createDropdownList.bind(this)
     }
     createDropdownList() {
@@ -15,20 +14,13 @@ class MobileMenuDropdownContainer extends React.Component {
         })
 
     }
-    showDropdown() {
-        const { dropdownTitle } = this.props
+    render() {
         const createDropdownList = this.createDropdownList()
         return (
-            <select>
-                <option value=''>{dropdownTitle}</option>
-                {createDropdownList}
-            </select>)
-    }
-    render() {
-        const showDropdown = this.showDropdown()
-        return (
             <div className='MobileMenuDropdownContainer'>
-                {showDropdown}
+                <select>
+                    {createDropdownList}
+                </select>
             </div>
         )
     }

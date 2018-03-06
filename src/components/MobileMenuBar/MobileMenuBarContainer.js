@@ -1,6 +1,6 @@
 import React from 'react'
 import MobileMenuTitle from './../MobileMenuTitle'
-import MobileMenuSection from './../MobileMenuSection'
+import MobileMenuList from './../MobileMenuList'
 import MobileMenuDropdownSection from './../MobileMenuDropdownSection'
 import PremiumInformation from './../PremiumInformation'
 import MobileMenuSocialIcons from './../MobileMenuSocialIcons'
@@ -9,6 +9,7 @@ import Login from './../Login'
 import Register from './../Register'
 import SocialMediaButtons from './../SocialMediaButtons'
 import Search from './../Search'
+import MobileMenuSection from './../MobileMenuSection'
 import './style.scss'
 
 class MobileMenuBarContainer extends React.PureComponent {
@@ -19,7 +20,7 @@ class MobileMenuBarContainer extends React.PureComponent {
             menuSections: {
                 openMobileSectionNews: false,
                 openMobileSectionTexts: false,
-                openMobileSectionEncyclopedia: true,
+                openMobileSectionEncyclopedia: false,
                 openMobileSectionVideo: true,
                 openMobileSectionGuides: true,
                 openMobileSectionDownloads: true,
@@ -82,7 +83,7 @@ class MobileMenuBarContainer extends React.PureComponent {
                 <div className='MobileMenuBarContainer__menuPart'>
                     <div className='MobileMenuBarContainer__menuPart__navPart'>
                         <div className='MobileMenuBarContainer__menuPart__navPart__column'>
-                            <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
+                            {/* <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
                         MobileMenuBarContainer__menuPart__navPart__column__section--underline`}>
                                 {isMobile
                                     ? <Button
@@ -94,11 +95,14 @@ class MobileMenuBarContainer extends React.PureComponent {
                                 <div className={openMobileSectionNews
                                     ? 'MobileMenuBarContainer__menuPart__navPart__column__section--visibility'
                                     : ''}>
-                                    <MobileMenuSection
+                                    <MobileMenuList
                                         topics={['News', 'Top Topics', 'Popular', 'Comics']} />
                                 </div>
-                            </div>
-                            <div className='MobileMenuBarContainer__menuPart__navPart__column__section'>
+                            </div> */}
+                            <MobileMenuSection
+                                title={'News'}
+                                topics={['News', 'Top Topics', 'Popular', 'Comics']} />
+                            {/* <div className='MobileMenuBarContainer__menuPart__navPart__column__section'>
                                 {isMobile
                                     ? <button onClick={this.toogleDisplayOfMobileSectionTexts}
                                         className='MobileMenuBarContainer__menuPart__navPart__column__section__mobileButton'>
@@ -109,13 +113,16 @@ class MobileMenuBarContainer extends React.PureComponent {
                                 <div className={openMobileSectionTexts
                                     ? 'MobileMenuBarContainer__menuPart__navPart__column__section--visibility'
                                     : ''}>
-                                    <MobileMenuSection
+                                    <MobileMenuList
                                         topics={['Reviews', 'Journalism', 'Preorder', 'gameplay.pl']} />
                                 </div>
-                            </div>
+                            </div> */}
+                            <MobileMenuSection
+                                title={'Texts'}
+                                topics={['Reviews', 'Journalism', 'Preorder', 'gameplay.pl']} />
                         </div>
                         <div className='MobileMenuBarContainer__menuPart__navPart__column'>
-                            <div className='MobileMenuBarContainer__menuPart__navPart__column__section'>
+                            {/* <div className='MobileMenuBarContainer__menuPart__navPart__column__section'>
                                 {isMobile
                                     ? <button onClick={this.toogleDisplayOfMobileSectionEncyclopedia}
                                         className='MobileMenuBarContainer__menuPart__navPart__column__section__mobileButton'>
@@ -136,14 +143,23 @@ class MobileMenuBarContainer extends React.PureComponent {
                                                 'Sports', 'arcade', 'Fighting games', 'Racing games', 'simulations',
                                                 'Logic games']} />
                                     </div>
-                                    <MobileMenuSection
+                                    <MobileMenuList
                                         topics={['Top Games', 'dates of the premier', 'Beta Tests', 'ranking of games',
                                             'recommended', 'company catalogue']} />
                                 </div>
-                            </div>
+                            </div> */}
+                            <MobileMenuSection
+                                title={'encyclopedia'}
+                                topics={['Top Games', 'dates of the premier', 'Beta Tests', 'ranking of games',
+                                    'recommended', 'company catalogue']}
+                                dropdown={[['platform', 'PC', 'PS4', 'PS3', 'XONE', 'X360', 'Switch', 'AND', 'IOS'],
+                                ['Action games', 'RPG', 'MMO games', 'Strategic games', 'Adventure',
+                                    'Sports', 'arcade', 'Fighting games', 'Racing games', 'simulations',
+                                    'Logic games']]}
+                            />
                         </div>
                         <div className='MobileMenuBarContainer__menuPart__navPart__column'>
-                            <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
+                            {/* <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
                         MobileMenuBarContainer__menuPart__navPart__column__section--underline`}>
                                 {isMobile
                                     ? <button className='MobileMenuBarContainer__menuPart__navPart__column__section__mobileButton'>
@@ -151,9 +167,12 @@ class MobileMenuBarContainer extends React.PureComponent {
                                     </button>
                                     : <MobileMenuTitle title={'Video'} />
                                 }
-                                <MobileMenuSection topics={['tvgame.pl', 'video from games', 'movie trailers']} />
-                            </div>
-                            <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
+                                <MobileMenuList topics={['tvgame.pl', 'video from games', 'movie trailers']} />
+                            </div> */}
+                            <MobileMenuSection
+                                title={'Video'}
+                                topics={['tvgame.pl', 'video from games', 'movie trailers']} />
+                            {/* <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
                         MobileMenuBarContainer__menuPart__navPart__column__section--underline`}>
                                 {isMobile
                                     ? <button className='MobileMenuBarContainer__menuPart__navPart__column__section__mobileButton'>
@@ -161,9 +180,12 @@ class MobileMenuBarContainer extends React.PureComponent {
                                     </button>
                                     : <MobileMenuTitle title={'Guides'} />
                                 }
-                                <MobileMenuSection topics={['codes and trainers']} />
-                            </div>
-                            <div className='MobileMenuBarContainer__menuPart__navPart__column__section'>
+                                <MobileMenuList topics={['codes and trainers']} />
+                            </div> */}
+                            <MobileMenuSection
+                                title={'Guides'}
+                                topics={['codes and trainers']} />
+                            {/* <div className='MobileMenuBarContainer__menuPart__navPart__column__section'>
                                 {isMobile
                                     ? <button className='MobileMenuBarContainer__menuPart__navPart__column__section__mobileButton'>
                                         <MobileMenuTitle title={'Downloads'} />
@@ -175,10 +197,14 @@ class MobileMenuBarContainer extends React.PureComponent {
                                         dropdown={['games and demos', 'Mods', 'updates', 'programs',
                                             'wallpaper']} />
                                 </div>
-                            </div>
+                            </div> */}
+                            <MobileMenuSection
+                                title={'Downloads'}
+                                dropdown={[['games and demos', 'Mods', 'updates', 'programs',
+                                    'wallpaper']]} />
                         </div>
                         <div className='MobileMenuBarContainer__menuPart__navPart__column'>
-                            <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
+                            {/* <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
                         MobileMenuBarContainer__menuPart__navPart__column__section--underline`}>
                                 {isMobile
                                     ? <button className='MobileMenuBarContainer__menuPart__navPart__column__section__mobileButton'>
@@ -186,8 +212,9 @@ class MobileMenuBarContainer extends React.PureComponent {
                                     </button>
                                     : <MobileMenuTitle title={'Free Games'} />
                                 }
-                            </div>
-                            <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
+                            </div> */}
+                            <MobileMenuSection title={'Free Games'} />
+                            {/* <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
                         MobileMenuBarContainer__menuPart__navPart__column__section--underline`}>
                                 {isMobile
                                     ? <button className='MobileMenuBarContainer__menuPart__navPart__column__section__mobileButton'>
@@ -195,8 +222,9 @@ class MobileMenuBarContainer extends React.PureComponent {
                                     </button>
                                     : <MobileMenuTitle title={'Forum'} />
                                 }
-                            </div>
-                            <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
+                            </div> */}
+                            <MobileMenuSection title={'Forum'} />
+                            {/* <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
                         MobileMenuBarContainer__menuPart__navPart__column__section--underline`}>
                                 {isMobile
                                     ? <button className='MobileMenuBarContainer__menuPart__navPart__column__section__mobileButton'>
@@ -204,8 +232,9 @@ class MobileMenuBarContainer extends React.PureComponent {
                                     </button>
                                     : <MobileMenuTitle title={'Shop'} />
                                 }
-                            </div>
-                            <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
+                            </div> */}
+                            <MobileMenuSection title={'Shop'} />
+                            {/* <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
                         MobileMenuBarContainer__menuPart__navPart__column__section--underline`}>
                                 {isMobile
                                     ? <button className='MobileMenuBarContainer__menuPart__navPart__column__section__mobileButton'>
@@ -213,8 +242,9 @@ class MobileMenuBarContainer extends React.PureComponent {
                                     </button>
                                     : <MobileMenuTitle title={'Forum'} />
                                 }
-                            </div>
-                            <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
+                            </div> */}
+                            <MobileMenuSection title={'Forum'} />
+                            {/* <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
                         MobileMenuBarContainer__menuPart__navPart__column__section--underline`}>
                                 {isMobile
                                     ? <button className='MobileMenuBarContainer__menuPart__navPart__column__section__mobileButton'>
@@ -222,17 +252,23 @@ class MobileMenuBarContainer extends React.PureComponent {
                                     </button>
                                     : <MobileMenuTitle title={'GPC'} />
                                 }
-                                <MobileMenuSection topics={['week occasions']} />
-                            </div>
-                            <div>
+                                <MobileMenuList topics={['week occasions']} />
+                            </div> */}
+                            <MobileMenuSection
+                                title={'GPC'}
+                                topics={['week occasions']} />
+                            {/* <div>
                                 {isMobile
                                     ? <button className='MobileMenuBarContainer__menuPart__navPart__column__section__mobileButton'>
                                         <MobileMenuTitle title={'subscriptions'} />
                                     </button>
                                     : <MobileMenuTitle title={'subscriptions'} />
                                 }
-                                <MobileMenuSection topics={['premium content']} />
-                            </div>
+                                <MobileMenuList topics={['premium content']} />
+                            </div> */}
+                            <MobileMenuSection
+                                title={'subscriptions'}
+                                topics={['premium content']} />
                         </div>
                         <div className='MobileMenuBarContainer__menuPart__navPart__column'>
                             <div className={isMobile

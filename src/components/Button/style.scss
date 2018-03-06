@@ -1,0 +1,11 @@
+.MobileMenuButton{
+    font-size: 18px;
+    color: #a50101;
+    font-weight: 600;
+}
+@media screen and (max-width: 1023px) {
+    .MobileMenuButton {
+        color: black;
+        padding: 7px;
+    }
+}

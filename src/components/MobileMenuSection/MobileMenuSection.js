@@ -1,11 +1,14 @@
 import React from 'react'
-import './style.scss'
+import MobileMenuTitle from './../MobileMenuTitle'
+import Button from './../Button'
 
 const MobileMenuSection = props => {
-    const { topic } = props
+    const { toogleSection, isOpen, title, showTopicsList, showDropdownList } = props
     return (
         <div className='MobileMenuSection'>
-            <a>{topic}</a>
+            <Button handle={toogleSection} title={title} />
+            {showDropdownList}
+            {showTopicsList}
         </div>
     )
 }
