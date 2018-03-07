@@ -83,71 +83,16 @@ class MobileMenuBarContainer extends React.PureComponent {
                 <div className='MobileMenuBarContainer__menuPart'>
                     <div className='MobileMenuBarContainer__menuPart__navPart'>
                         <div className='MobileMenuBarContainer__menuPart__navPart__column'>
-                            {/* <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
-                        MobileMenuBarContainer__menuPart__navPart__column__section--underline`}>
-                                {isMobile
-                                    ? <Button
-                                        title={'News'}
-                                        handle={this.toogleDisplayOfMobileSection}
-                                        sectionState={'openMobileSectionNews'} />
-                                    : <MobileMenuTitle title={'News'} />
-                                }
-                                <div className={openMobileSectionNews
-                                    ? 'MobileMenuBarContainer__menuPart__navPart__column__section--visibility'
-                                    : ''}>
-                                    <MobileMenuList
-                                        topics={['News', 'Top Topics', 'Popular', 'Comics']} />
-                                </div>
-                            </div> */}
                             <MobileMenuSection
                                 title={'News'}
                                 topics={['News', 'Top Topics', 'Popular', 'Comics']} />
-                            {/* <div className='MobileMenuBarContainer__menuPart__navPart__column__section'>
-                                {isMobile
-                                    ? <button onClick={this.toogleDisplayOfMobileSectionTexts}
-                                        className='MobileMenuBarContainer__menuPart__navPart__column__section__mobileButton'>
-                                        <MobileMenuTitle title={'Texts'} />
-                                    </button>
-                                    : <MobileMenuTitle title={'Texts'} />
-                                }
-                                <div className={openMobileSectionTexts
-                                    ? 'MobileMenuBarContainer__menuPart__navPart__column__section--visibility'
-                                    : ''}>
-                                    <MobileMenuList
-                                        topics={['Reviews', 'Journalism', 'Preorder', 'gameplay.pl']} />
-                                </div>
-                            </div> */}
-                            <MobileMenuSection
-                                title={'Texts'}
-                                topics={['Reviews', 'Journalism', 'Preorder', 'gameplay.pl']} />
+                            <div className='MobileMenuBarContainer__menuPart__navPart__column__item'>
+                                <MobileMenuSection
+                                    title={'Texts'}
+                                    topics={['Reviews', 'Journalism', 'Preorder', 'gameplay.pl']} />
+                            </div>
                         </div>
                         <div className='MobileMenuBarContainer__menuPart__navPart__column'>
-                            {/* <div className='MobileMenuBarContainer__menuPart__navPart__column__section'>
-                                {isMobile
-                                    ? <button onClick={this.toogleDisplayOfMobileSectionEncyclopedia}
-                                        className='MobileMenuBarContainer__menuPart__navPart__column__section__mobileButton'>
-                                        <MobileMenuTitle title={'game encyclopedia'} />
-                                    </button>
-                                    : <MobileMenuTitle title={'game encyclopedia'} />
-                                }
-                                <div className={openMobileSectionEncyclopedia
-                                    ? 'MobileMenuBarContainer__menuPart__navPart__column__section--visibility'
-                                    : ''}>
-                                    <div className='MobileMenuBarContainer__menuPart__navPart__column__section--extraMargin'>
-                                        <MobileMenuDropdownSection dropdownTitle={'platform'}
-                                            dropdown={['PC', 'PS4', 'PS3', 'XONE', 'X360', 'Switch', 'AND', 'IOS']} />
-                                    </div>
-                                    <div className='MobileMenuBarContainer__menuPart__navPart__column__section--extraMargin'>
-                                        <MobileMenuDropdownSection dropdownTitle={'species'}
-                                            dropdown={['Action games', 'RPG', 'MMO games', 'Strategic games', 'Adventure',
-                                                'Sports', 'arcade', 'Fighting games', 'Racing games', 'simulations',
-                                                'Logic games']} />
-                                    </div>
-                                    <MobileMenuList
-                                        topics={['Top Games', 'dates of the premier', 'Beta Tests', 'ranking of games',
-                                            'recommended', 'company catalogue']} />
-                                </div>
-                            </div> */}
                             <MobileMenuSection
                                 title={'encyclopedia'}
                                 topics={['Top Games', 'dates of the premier', 'Beta Tests', 'ranking of games',
@@ -159,113 +104,25 @@ class MobileMenuBarContainer extends React.PureComponent {
                             />
                         </div>
                         <div className='MobileMenuBarContainer__menuPart__navPart__column'>
-                            {/* <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
-                        MobileMenuBarContainer__menuPart__navPart__column__section--underline`}>
-                                {isMobile
-                                    ? <button className='MobileMenuBarContainer__menuPart__navPart__column__section__mobileButton'>
-                                        <MobileMenuTitle title={'Video'} />
-                                    </button>
-                                    : <MobileMenuTitle title={'Video'} />
-                                }
-                                <MobileMenuList topics={['tvgame.pl', 'video from games', 'movie trailers']} />
-                            </div> */}
                             <MobileMenuSection
                                 title={'Video'}
                                 topics={['tvgame.pl', 'video from games', 'movie trailers']} />
-                            {/* <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
-                        MobileMenuBarContainer__menuPart__navPart__column__section--underline`}>
-                                {isMobile
-                                    ? <button className='MobileMenuBarContainer__menuPart__navPart__column__section__mobileButton'>
-                                        <MobileMenuTitle title={'Guides'} />
-                                    </button>
-                                    : <MobileMenuTitle title={'Guides'} />
-                                }
-                                <MobileMenuList topics={['codes and trainers']} />
-                            </div> */}
                             <MobileMenuSection
                                 title={'Guides'}
                                 topics={['codes and trainers']} />
-                            {/* <div className='MobileMenuBarContainer__menuPart__navPart__column__section'>
-                                {isMobile
-                                    ? <button className='MobileMenuBarContainer__menuPart__navPart__column__section__mobileButton'>
-                                        <MobileMenuTitle title={'Downloads'} />
-                                    </button>
-                                    : <MobileMenuTitle title={'Downloads'} />
-                                }
-                                <div className='MobileMenuBarContainer__menuPart__navPart__column__section--extraMargin'>
-                                    <MobileMenuDropdownSection dropdownTitle={'downloads'}
-                                        dropdown={['games and demos', 'Mods', 'updates', 'programs',
-                                            'wallpaper']} />
-                                </div>
-                            </div> */}
                             <MobileMenuSection
                                 title={'Downloads'}
                                 dropdown={[['games and demos', 'Mods', 'updates', 'programs',
                                     'wallpaper']]} />
                         </div>
                         <div className='MobileMenuBarContainer__menuPart__navPart__column'>
-                            {/* <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
-                        MobileMenuBarContainer__menuPart__navPart__column__section--underline`}>
-                                {isMobile
-                                    ? <button className='MobileMenuBarContainer__menuPart__navPart__column__section__mobileButton'>
-                                        <MobileMenuTitle title={'Free Games'} />
-                                    </button>
-                                    : <MobileMenuTitle title={'Free Games'} />
-                                }
-                            </div> */}
                             <MobileMenuSection title={'Free Games'} />
-                            {/* <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
-                        MobileMenuBarContainer__menuPart__navPart__column__section--underline`}>
-                                {isMobile
-                                    ? <button className='MobileMenuBarContainer__menuPart__navPart__column__section__mobileButton'>
-                                        <MobileMenuTitle title={'Forum'} />
-                                    </button>
-                                    : <MobileMenuTitle title={'Forum'} />
-                                }
-                            </div> */}
                             <MobileMenuSection title={'Forum'} />
-                            {/* <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
-                        MobileMenuBarContainer__menuPart__navPart__column__section--underline`}>
-                                {isMobile
-                                    ? <button className='MobileMenuBarContainer__menuPart__navPart__column__section__mobileButton'>
-                                        <MobileMenuTitle title={'Shop'} />
-                                    </button>
-                                    : <MobileMenuTitle title={'Shop'} />
-                                }
-                            </div> */}
                             <MobileMenuSection title={'Shop'} />
-                            {/* <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
-                        MobileMenuBarContainer__menuPart__navPart__column__section--underline`}>
-                                {isMobile
-                                    ? <button className='MobileMenuBarContainer__menuPart__navPart__column__section__mobileButton'>
-                                        <MobileMenuTitle title={'Forum'} />
-                                    </button>
-                                    : <MobileMenuTitle title={'Forum'} />
-                                }
-                            </div> */}
                             <MobileMenuSection title={'Forum'} />
-                            {/* <div className={`MobileMenuBarContainer__menuPart__navPart__column__section 
-                        MobileMenuBarContainer__menuPart__navPart__column__section--underline`}>
-                                {isMobile
-                                    ? <button className='MobileMenuBarContainer__menuPart__navPart__column__section__mobileButton'>
-                                        <MobileMenuTitle title={'GPC'} />
-                                    </button>
-                                    : <MobileMenuTitle title={'GPC'} />
-                                }
-                                <MobileMenuList topics={['week occasions']} />
-                            </div> */}
                             <MobileMenuSection
                                 title={'GPC'}
                                 topics={['week occasions']} />
-                            {/* <div>
-                                {isMobile
-                                    ? <button className='MobileMenuBarContainer__menuPart__navPart__column__section__mobileButton'>
-                                        <MobileMenuTitle title={'subscriptions'} />
-                                    </button>
-                                    : <MobileMenuTitle title={'subscriptions'} />
-                                }
-                                <MobileMenuList topics={['premium content']} />
-                            </div> */}
                             <MobileMenuSection
                                 title={'subscriptions'}
                                 topics={['premium content']} />
@@ -308,8 +165,8 @@ class MobileMenuBarContainer extends React.PureComponent {
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div >
+            </div >
         )
     }
 }
