@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import MobileMenuTitle from './../MobileMenuTitle'
 import MobileMenuList from './../MobileMenuList'
 import MobileMenuDropdownSection from './../MobileMenuDropdownSection'
